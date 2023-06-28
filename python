@@ -1,0 +1,17 @@
+class ATM:
+    def __init__(self, balance):
+        self.balance = balance
+
+    def check_balance(self):
+        return self.balance
+
+    def deposit(self, amount):
+        self.balance += amount
+        return self.balance
+
+    def withdraw(self, amount):
+        if amount <= self.balance:
+            self.balance -= amount
+            return amount
+        else:
+            return "Insufficient funds"
